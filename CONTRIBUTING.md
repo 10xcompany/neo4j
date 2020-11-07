@@ -73,3 +73,7 @@ Some highlights:
 The project have very precise rules over how git commit messages can be formatted. This leads to
 **more readable messages** that are easy to follow when looking through the **project history**.
 But also, git history is used to **generate the change log**.
+
+## What's next
+
+Checkout [ROADMAP.md](ROADMAP.md) for the next features this package is meant to introduce

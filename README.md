@@ -23,6 +23,8 @@ $ npm i -s @10xcompany/nest-neo4j neo4j-driver
 Once the installation process is completed, we can import the `Neo4jModule` into the required module or in global scope in `AppModule`.
 
 ```typescript
+import {Neo4jModule} from '@10xcompany/nest-neo4j';
+
 @Module({
   imports: [
     Neo4jModule.forRoot({
@@ -40,6 +42,8 @@ export class CustomModule {}
 Or, if you want to use it in global:
 
 ```typescript
+import {Neo4jModule} from '@10xcompany/nest-neo4j';
+
 @Module({
   imports: [
     Neo4jModule.forRoot({
@@ -57,6 +61,8 @@ export class AppModule {}
 Or, if you're using the Async provider:
 
 ```typescript
+import {Neo4jModule} from '@10xcompany/nest-neo4j';
+
 @Module({
   imports: [
     Neo4jModule.forRootAsync({
@@ -79,6 +85,8 @@ The `forRoot()/forRootAsync()` method accepts the same configuration object as `
 Afterward, the `Neo4jService` will be available to inject across entire project or the module which the `Neo4jModule` is used.
 
 ```ts
+import {Neo4jService} from '@10xcompany/nest-neo4j';
+
 @Injectable()
 export class MyService {
   constructor(private readonly neo4jService: Neo4jService) {}
@@ -269,9 +277,7 @@ The `Neo4jService` exposes few methods for several use case:
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome. Please read
-[CONTRIBUTING.md](CONTRIBUTING.md)
-for details on the process for submitting pull requests to us.
+Contributions, issues and feature requests are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to us.
 
 ## Authors
 
