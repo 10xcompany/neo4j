@@ -1,10 +1,4 @@
-import {
-  DynamicModule,
-  Global,
-  Inject,
-  Module,
-  OnModuleDestroy,
-} from '@nestjs/common';
+import {DynamicModule, Global, Module, OnModuleDestroy} from '@nestjs/common';
 import {Driver} from 'neo4j-driver';
 import {ModuleRef} from '@nestjs/core';
 import {Neo4jService} from './neo4j.service';
@@ -19,11 +13,7 @@ import {createAsyncClientOptions, createClient} from './neo4j.provider';
   exports: [Neo4jService, Neo4jTransactionInterceptor],
 })
 export class Neo4jCoreModule implements OnModuleDestroy {
-  constructor(
-    @Inject(NEO4J_CONFIG)
-    private readonly options: Neo4jConfig,
-    private readonly moduleRef: ModuleRef,
-  ) {}
+  constructor(private readonly moduleRef: ModuleRef) {}
 
   static forRoot(options: Neo4jConfig): DynamicModule {
     return {

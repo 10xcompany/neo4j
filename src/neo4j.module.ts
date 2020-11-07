@@ -1,11 +1,10 @@
 import {DynamicModule, Module} from '@nestjs/common';
-import {ModuleRef} from '@nestjs/core';
 import {Neo4jConfig, Neo4jModuleAsyncOptions} from './neo4j.interface';
 import {Neo4jCoreModule} from './neo4j.core.module';
 
 @Module({})
 export class Neo4jModule {
-  constructor(private readonly moduleRef: ModuleRef) {}
+  constructor() {}
 
   static forRoot(options: Neo4jConfig): DynamicModule {
     return {

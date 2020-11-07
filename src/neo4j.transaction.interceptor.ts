@@ -16,8 +16,6 @@ export class Neo4jTransactionInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     const transaction: Transaction = this.neo4jService.beginTransaction();
 
-    context.switchToHttp().getRequest().transaction = transaction;
-
     return next.handle().pipe(
       tap(() => {
         transaction.commit();
