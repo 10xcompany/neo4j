@@ -29,7 +29,7 @@ is wrong. This will help to understand and fix the issue faster.
 
 Before you submit your pull request consider the following guidelines:
 
-- Search [GitHub](https://github.com/mikro-orm/mikro-orm/pulls) for an open or closed PR
+- Search [GitHub](https://github.com/10xcompany/neo4j/pulls) for an open or closed PR
   that relates to your submission. You don't want to duplicate effort.
 
 - Run tests before you start working, to be sure they all pass and your setup is working correctly:
