@@ -271,7 +271,7 @@ The `Neo4jService` exposes few methods for several use case:
 
 - `async read(): Promise<Result>`: method to run a query to get a node/relationship or path from the database, this method should only be used for a read operation not write.
 
-- `async wite(): Promise<Result>`: method to run a query to write node/relationship to the database, this method should only be used for a write operation.
+- `async write(): Promise<Result>`: method to run a query to write node/relationship to the database, this method should only be used for a write operation.
 
 - `async writeTransaction(): Promise<Result>`: (recommended) method to run a query to write node/relationship to the database, this method should only be used for a write operation, this method is preferred because it implements a rollback if a transaction fails and revert back all changes.
 
